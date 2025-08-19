@@ -1,0 +1,1 @@
+This file exists to illustrate the tests directory structure. Replace with real tests as you implement mocks and integration tests.
