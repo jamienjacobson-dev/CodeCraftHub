@@ -27,9 +27,13 @@ async function updateUser(userId, updates) {
   return rest;
 }
 
-const User = require('../models/userModel');
-
 // Function to find user by ID
 exports.findUserById = async (userId) => {
   return await User.findById(userId);
+};
+
+module.exports = {
+    createUser,
+    findByEmail,
+    updateUser,
 };

@@ -1,9 +1,4 @@
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-
-
-const express = require('express');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
@@ -14,6 +9,7 @@ const errorHandler = require('../utils/errorHandler');
 
 function createServer() {
   const app = express();
+  app.set('trust proxy', 1);
   const PORT = process.env.PORT || 3000;
 
   // Security headers & parsing
@@ -45,4 +41,3 @@ function createServer() {
 }
 
 module.exports = { createServer };
-module.exports = initServer;

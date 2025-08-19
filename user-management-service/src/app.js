@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { createServer } = require('./config/server');
 const { connect } = require('./config/db');
 const env = require('./config/env');
